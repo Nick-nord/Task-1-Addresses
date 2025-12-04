@@ -15,8 +15,8 @@ class Address
 public:
 	Address() // конструктор класса по умолчанию
 	{
-		this -> City;
-		this -> Street;
+		this -> City = " ";
+		this -> Street = " ";
 		this -> NumHouse = 0;
 		this -> NumFlat = 0;
 	};
@@ -29,11 +29,11 @@ public:
 		this -> NumFlat = NumFlat;
 	};
 	
-	friend ostream& operator<<(ostream& stream, Address arr);
+	friend ostream& operator<<(ostream& stream, Address& arr);
   
 };
 
-ostream& operator << (ostream& stream, Address arr)
+ostream& operator << (ostream& stream, Address& arr)
 {
 	stream << arr.City << " ";
 	stream << arr.Street << " ";
@@ -101,3 +101,4 @@ int main(int argc, char* argv[])
 //   4. В окне "Список ошибок" можно просматривать ошибки.
 //   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
 //   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
+
